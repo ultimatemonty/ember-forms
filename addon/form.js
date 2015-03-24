@@ -45,15 +45,16 @@ export default Em.Component.extend({
   v_icons: true,
 
   /*
-  Form submit
-  
-  Optionally execute model validations and perform a form submission.
+   Form submit
    */
   submit: function(e) {
     var promise;
+    var self = this;
+
     if (e) {
       e.preventDefault();
     }
+
     if (Em.isNone(this.get('model.validate'))) {
       return this.get('targetObject').send(this.get('action'));
     } else {
@@ -64,7 +65,19 @@ export default Em.Component.extend({
             return _this.get('targetObject').send(_this.get('action'));
           }
         };
+      })(this)).catch((function(_this) {
+        self.showErrors(_this);
       })(this));
     }
+  },
+
+  showErrors: function(view) {
+    var self = this;
+    Em.$.each(view._childViews, function(key, validation) {
+      validation.set('canShowErrors', true);
+      if (validation._childViews) {
+        self.showError(validation);
+      }
+    });
   }
 });
