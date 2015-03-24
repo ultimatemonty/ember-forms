@@ -1,12 +1,7 @@
+PR's implemented from https://github.com/indexiatech/ember-forms:
 
-```
-                  __                    ____                         
-  ___  ____ ___  / /_  ___  _____      / __/___  _________ ___  _____
- / _ \/ __ `__ \/ __ \/ _ \/ ___/_____/ /_/ __ \/ ___/ __ `__ \/ ___/
-/  __/ / / / / / /_/ /  __/ /  /_____/ __/ /_/ / /  / / / / / (__  ) 
-\___/_/ /_/ /_/_.___/\___/_/        /_/  \____/_/  /_/ /_/ /_/____/  
-                                                                     
-```
+https://github.com/indexiatech/ember-forms/pull/74
+https://github.com/indexiatech/ember-forms/pull/71
 
 # Ember-Forms
 
