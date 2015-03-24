@@ -74,9 +74,11 @@ export default Em.Component.extend({
   showErrors: function(view) {
     var self = this;
     Em.$.each(view._childViews, function(key, validation) {
-      validation.set('canShowErrors', true);
-      if (validation._childViews) {
-        self.showErrors(validation);
+      if (typeof validation.set !== 'undefined') {
+        validation.set('canShowErrors', true);
+        if (validation._childViews) {
+          self.showErrors(validation);
+        }  
       }
     });
   }
