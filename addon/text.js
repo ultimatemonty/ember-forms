@@ -12,6 +12,7 @@ export default FormGroupComponent.extend({
   controlView: Em.TextArea.extend(ControlMixin, {
     attributeBindings: ['placeholder', 'disabled'],
     placeholder: Em.computed.alias('parentView.placeholder'),
+    disabled: Em.computed.alias('parentView.disabled'),
     model: Em.computed.alias('parentView.model'),
     propertyName: Em.computed.alias('parentView.propertyName'),
     rows: Em.computed.alias('parentView.rows')
