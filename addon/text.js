@@ -10,7 +10,7 @@ Syntax:
  */
 export default FormGroupComponent.extend({
   controlView: Em.TextArea.extend(ControlMixin, {
-    attributeBindings: ['placeholder'],
+    attributeBindings: ['placeholder', 'disabled'],
     placeholder: Em.computed.alias('parentView.placeholder'),
     model: Em.computed.alias('parentView.model'),
     propertyName: Em.computed.alias('parentView.propertyName'),
